@@ -1,0 +1,49 @@
+{
+    "naag": {
+        "password": "scrypt:32768:8:1$GuxhywRAQrcyva3e$721be8a8b797a0b0979c87fa08f3d60ab1bbb15a12efbd1ecb4c34a13b8952cb7b64dc4b6c109f918d3bc0dd5b2b20c91f54a761c339e69bbec0674c04045853",
+        "achievements": [],
+        "score": 0,
+        "training": "",
+        "history": [
+            {
+                "score": 34,
+                "achievement": "High Stress",
+                "training": "Therapy, Mindfulness, Deep Breathing",
+                "date": "2025-11-23"
+            },
+            {
+                "score": 34,
+                "achievement": "High Stress",
+                "training": "Therapy, Mindfulness, Deep Breathing",
+                "training_steps": [
+                    "Step 1: Practice 10 minutes of guided meditation",
+                    "Step 2: Write your thoughts and stress triggers",
+                    "Step 3: Engage in physical exercise",
+                    "Step 4: Consider professional counseling"
+                ],
+                "date": "2025-11-23"
+            },
+            {
+                "score": 0,
+                "achievement": "Low Stress",
+                "training": "Meditation, Light Exercise",
+                "training_steps": [
+                    "Step 1: Do 5 minutes of deep breathing",
+                    "Step 2: Take a short walk",
+                    "Step 3: Listen to relaxing music"
+                ],
+                "date": "2025-11-23"
+            }
+        ],
+        "current_training": "Meditation, Light Exercise",
+        "bmi": 29.2,
+        "bmi_status": "Overweight",
+        "bmi_plan": [
+            "Reduce calorie intake moderately",
+            "Walk 5000-10000 steps daily",
+            "Drink at least 2 liters of water",
+            "Target weight loss: 10.8 kg"
+        ],
+        "bmi_calories": 1800
+    }
+}

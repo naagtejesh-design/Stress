@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Stress Checkup</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+    <h2>Mental Health Check</h2>
+    <form method="POST">
+        {% for i, q in enumerate(questions) %}
+            <p>{{ q.q }}</p>
+            <select name="q{{i}}" required>
+                <option value="0">Never</option>
+                <option value="1">Sometimes</option>
+                <option value="2">Often</option>
+                <option value="3">Always</option>
+            </select>
+        {% endfor %}
+        <button class="btn" type="submit">Submit</button>
+    </form>
+</div>
+</body>
+</html>

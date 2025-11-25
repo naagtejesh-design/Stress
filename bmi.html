@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>BMI Check</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+    <h2>Physical Health & BMI Check</h2>
+
+    {% if bmi %}
+        <p><strong>Your BMI:</strong> {{ bmi }} ({{ status }})</p>
+        <p><strong>Calories Recommended Daily:</strong> {{ calories }} kcal</p>
+        <p><strong>Weight to Gain/Lose:</strong> {{ weight_change }} kg</p>
+        <h3>Plan to Improve Your Health:</h3>
+        <ul>
+            {% for step in plan_steps %}
+                <li>{{ step }}</li>
+            {% endfor %}
+        </ul>
+        <a class="btn" href="{{ url_for('stress_questions') }}">Proceed to Mental Health Check</a>
+    {% else %}
+        <form method="POST">
+            <input type="number" name="height" placeholder="Height (cm)" required>
+            <input type="number" name="weight" placeholder="Weight (kg)" required>
+            <input type="number" name="age" placeholder="Age" required>
+            <select name="gender" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+            <button class="btn" type="submit">Calculate BMI</button>
+        </form>
+    {% endif %}
+</div>
+</body>
+</html>

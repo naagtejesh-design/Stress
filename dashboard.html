@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+    <h2>Welcome {{ username }}</h2>
+
+    {% if bmi %}
+        <h3>BMI Status: {{ bmi }} ({{ bmi_status }})</h3>
+        <ul>
+            {% for step in bmi_plan %}
+                <li>{{ step }}</li>
+            {% endfor %}
+        </ul>
+        <p>Daily Calories: {{ bmi_calories }} kcal</p>
+    {% endif %}
+
+    {% if history %}
+        <h3>Stress History</h3>
+        <ul>
+            {% for entry in history %}
+                <li>{{ entry.date }}: {{ entry.achievement }} (Score: {{ entry.score }})</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+    {% if training %}
+        <h3>Current Training: {{ training }}</h3>
+    {% endif %}
+
+    <a class="btn" href="{{ url_for('bmi_check') }}">BMI Check</a>
+    <a class="btn" href="{{ url_for('stress_questions') }}">Mental Health Check</a>
+    <a class="btn" href="{{ url_for('logout') }}">Logout</a>
+</div>
+</body>
+</html>
